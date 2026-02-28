@@ -1,4 +1,3 @@
-// Searchbox Functionality
 function searchBox() {
     const searchInput = document.querySelector(".searchbox");
     const gameTitle = document.querySelectorAll(".game-title");
@@ -18,7 +17,7 @@ function searchBox() {
             }
         });
 
-        // console.log(searchInput.value);
+
     });
 }
 

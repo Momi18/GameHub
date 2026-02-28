@@ -57,7 +57,6 @@ window.Score = 0;
 //Function to allow the snake to move by looping the game many times a second
 function GameLoop(){
     update();
-    //I was trying to make the Snake's speed overtime but I didnt get to finish
     setTimeout(GameLoop, 1000/Speed);
 }
 
@@ -88,7 +87,6 @@ function MapSizes(){
     SnakeY = Math.floor(SnakeY / BlockS) * BlockS;
     Body = Body.map(([x, y]) => [Math.floor(x / BlockS) * BlockS, Math.floor(y / BlockS) * BlockS]);
 
-    //Reposition Food
     FoodPos();
 }
 
@@ -102,7 +100,6 @@ window.onload = function() {
     map.height = Row * BlockS;
     map.width = Col * BlockS;
 
-    //Reposition Food
     FoodPos();
 
     //Allow for inputs from user
