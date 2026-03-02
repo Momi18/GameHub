@@ -1,11 +1,118 @@
-body {
-    background: rgb(143, 143, 143);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/* This is the CSS for the main page of the GameHub*/
+
+.Games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+    gap: 70px;
+}
+
+.Cards {
+    text-decoration: none;
+    color: #000;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border: 4px solid #000;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.Cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 0 #000;
+}
+
+.Contents {
     text-align: center;
 }
-h1 {
-    color: rgb(88, 34, 34);
+
+.icon {
+    font-size: 3rem;
 }
-h3 {
-    color: rgb(red, 0, 0);
+
+.Contents h3 {
+    margin-top: 10px;
+    font-family: sans-serif;
+}
+
+/* This is the CSS for TicTacToe*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: lightcyan;
+    text-align: center;
+}
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+    justify-content: center;
+}
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    color: red;
+    background-color: yellow;
+}
+#reset {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background: #191913;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+}
+.box:hover {
+    background-color: chocolate;
+}
+#new-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background: #191913;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+}
+#msg {
+    font-size: 8vmin;
+}
+.msg-container {
+    position: absolute; /* Takes the screen out of the normal layout */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers it perfectly */
+    z-index: 10; /* Ensures it stays on top of the game buttons */
+    
+    /* Styling the popup box */
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.hide {
+    display: none;
 }
