@@ -1,5 +1,26 @@
 /* This is the CSS for the main page of the GameHub*/
 
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 50px;
+}
+
+.searchbox-container {
+    position: absolute;
+    right: 80px;
+
+}
+
+.searchbox {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
 .Games {
     display: flex;
     flex-wrap: wrap;
