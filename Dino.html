@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GameHub</title>
 <link rel="stylesheet" href="Styles.css">
-<script src="Snake.js"></script>
 </head>
-
 <body>
     <div class="header">
         <div class="title">
@@ -21,24 +19,12 @@
         </div>
     </div>
 
-    <h1 class="GameHead">Sssnake</h1>
-    <canvas id="map"></canvas>
-    <h3>Score = <span id="sc"></span></h3>
-    <script>
-        document.getElementById("sc").innerText = window.Score;
-    </script>
-    <h3><br>Movement<br>
-        ↑ - Up&emsp;
-        ↓ - Down&emsp;
-        ← - Left&emsp;
-        → - Right<br>
-        Map Size<br>
-        s - Small&emsp;
-        m - Medium&emsp;
-        l - Large<br>
-
-        
-    </h3>
+    <h1 class="GameHead">Dino</h1> 
+    <div class="dino-wrapper">
+        <div id="dino"></div>
+        <div id="cactus"></div>
+</div>
+    </div>
+    <script src="Dino.js"></script>
 </body>
-
 </html>

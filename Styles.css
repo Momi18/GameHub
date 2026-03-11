@@ -4,14 +4,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    padding-top: 50px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    background-color: lightcyan;
+    padding: 20px 0;
+    border-bottom: 2px solid #000;
+}
+
+.home-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Games, .container {
+    margin-top: 100px; 
 }
 
 .searchbox-container {
     position: absolute;
-    right: 80px;
-
+    right: 40px;
 }
 
 .searchbox {
@@ -63,11 +77,14 @@
     font-family: sans-serif;
 }
 
-/* This is the CSS for TicTacToe*/
+/* This is the CSS for games*/
 
 * {
     margin: 0;
     padding: 0;
+}
+.GameHead{
+    margin-top: 120px;
 }
 body {
     background-color: lightcyan;
@@ -79,6 +96,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: -20px;
 }
 .game {
     height: 60vmin;
@@ -121,13 +139,12 @@ body {
     font-size: 8vmin;
 }
 .msg-container {
-    position: absolute; /* Takes the screen out of the normal layout */
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centers it perfectly */
-    z-index: 10; /* Ensures it stays on top of the game buttons */
+    transform: translate(-50%, -50%);
+    z-index: 10;
     
-    /* Styling the popup box */
     background-color: rgba(255, 255, 255, 0.95); 
     padding: 2rem;
     border-radius: 20px;
@@ -206,4 +223,55 @@ body {
 .score {
     font-size: 1.25rem;
     font-family: sans-serif;
+}
+.dino-wrapper {
+    width: 600px;
+    height: 200px;
+    border-bottom: 2px solid #000;
+    margin: 50px auto;
+    position: relative; 
+    overflow: hidden;
+    background-color: white;
+}
+
+#dino {
+    width: 70px;
+    height: 70px;
+    background-image: url(images/t-rex.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute; 
+    bottom: 0;
+    left: 50px;
+}
+
+#cactus {
+    width: 40px; 
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 580px;
+    background-image: url(images/cactus.png); 
+    background-size: 150%; 
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    animation: cactus-block 1.2s infinite linear;
+}
+
+/* The Jump Animation */
+.jump {
+    animation: dino-jump 0.3s linear;
+}
+
+@keyframes dino-jump {
+    0% { bottom: 0; }
+    30% { bottom: 50px; }
+    50% { bottom: 100px; }
+    80% { bottom: 50px; }
+    100% { bottom: 0; }
+}
+
+@keyframes cactus-block {
+    0% { left: 600px; }
+    100% { left: -20px; }
 }
