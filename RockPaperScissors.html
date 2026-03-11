@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub | Rock Paper Scissors</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="game-title">Rock Paper Scissors</h1>
+        <div class="rock-paper-scissors-container">
+            <div class="result-section">
+                <div class="result-images">
+                    <div class="user-result">
+                        <img src="images/rock_paper_scissors/fist_shake.png">
+                    </div>
+                    <div class="computer-result">
+                        <img src="images/rock_paper_scissors/fist_shake.png">
+                    </div>
+                </div>
+                <div class="round-result">Begin!!!</div>
+            </div>
+
+            <div class="move-choices">
+                <button class="move-choice" data-choice="rock">
+                    <img src="images/rock_paper_scissors/rock.png" alt="Rock">
+                    <p>Rock</p>
+                </button>
+                <button class="move-choice" data-choice="paper">
+                    <img src="images/rock_paper_scissors/paper.png" alt="Paper">
+                    <p>Paper</p>
+                </button>
+                <button class="move-choice" data-choice="scissors">
+                    <img src="images/rock_paper_scissors/scissors.png" alt="Scissors">
+                    <p>Scissors</p>
+                </button>
+            </div>
+
+            <div class="scoreboard">
+                <div class="score">
+                    <strong>Win:</strong> <span data-score="win">0</span>
+                </div>
+                <div class="score">
+                    <strong>Loss:</strong> <span data-score="loss">0</span>
+                </div>
+                <div class="score">
+                    <strong>Draw:</strong> <span data-score="draw">0</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
