@@ -156,17 +156,40 @@ body {
 }
 
 /* This is the CSS for RockPaperScissors*/
-
-.game-title { /* Optional game title class for all games */
+/*
+.game-title {  Optional game title class for all games 
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+*/
 .rock-paper-scissors-container {
     height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 6rem;
+}
+.rock-paper-scissors-container.start .move-choices {
+    pointer-events: none;
+}
+.rock-paper-scissors-container.start .user-result {
+    transform-origin: right;
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50%{
+        transform: rotate(40deg);
+    }
+}
+.rock-paper-scissors-container.start .computer-result {
+    transform-origin: left;
+    animation: computerShake 0.7s ease infinite;
+}
+@keyframes computerShake {
+    50%{
+        transform: rotate(-40deg);
+    }
 }
 .result-images {
     display: flex;
@@ -224,6 +247,9 @@ body {
     font-size: 1.25rem;
     font-family: sans-serif;
 }
+
+/* This is the CSS for DinoGame*/
+
 .dino-wrapper {
     width: 600px;
     height: 200px;
