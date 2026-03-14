@@ -1,5 +1,8 @@
 const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
+const dinoMsg = document.getElementById("dino-msg");
+const retryBtn = document.getElementById("retry-btn");
+
 function jump() {
     // FIX: Check dino.classList, not dispatchEvent.classList
     if (!dino.classList.contains("jump")) { 
@@ -11,16 +14,28 @@ function jump() {
     }
 }
 let checkAlive = setInterval(function () {
-    let dinoBottom = parseInt(window.getComputedStyle(dino).getPropertyValue("bottom"));
+    let dinoBot = parseInt(window.getComputedStyle(dino).getPropertyValue("bottom"));
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
-    
-    if (cactusLeft > 50 && cactusLeft < 120 && dinoBottom < 40) {
+
+    // Collision Check
+    if (cactusLeft > 50 && cactusLeft < 120 && dinoBot < 40) {
+        // 1. Stop the animations
         dino.style.animationPlayState = "paused";
         cactus.style.animationPlayState = "paused";
-        alert("Whoops! Game Over :(");
-        window.location.reload();
+
+        // 2. Show the on-screen message
+        dinoMsg.classList.remove("hide");
+
+        // 3. Optional: Stop the interval from running
+        clearInterval(checkAlive);
     }
 }, 10);
+
+// Restart functionality when the button is clicked
+retryBtn.addEventListener("click", function() {
+    window.location.reload(); 
+});
+
 document.addEventListener("keydown", function (event) {
     jump();
 });

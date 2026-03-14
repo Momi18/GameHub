@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>GameHub</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="title">
+            <a href="index.html" class="home-link">
+                <h1>GameHub</h1>
+            </a>
+        </div>
+
+        <div class="searchbox-container">
+            <input type="text" placeholder="Search games..." class="searchbox">
+        </div>
+    </div>
+
+    <div class="containerM">
+        <div id="memory-msg" class="msg-container hide">
+            <h2 id="status-text">Congratulations!</h2>
+            <p id="move-result">You won in 0 moves.</p>
+            <button id="play-again" class="restart-button">Play Again</button>
+        </div>
+        <div id="dynamic-cards" class="game-container">
+            <div class="heading-container">
+                <h1 class="gfg-heading">
+                      Memory
+                  </h1>
+                <h2 class="game-heading">Click any card to flip it!</h2>
+            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="1" 
+                        src="images/lion.jpg"
+                        alt="Lion Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="2" 
+                        src="images/rhino.jpg"
+                        alt="Rhino Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="3" 
+                        src="images/giraffe.jpg"
+                        alt="Giraffe Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="4" 
+                        src="images/rhino.jpg"
+                        alt="Rhino Image" class="card-image">
+                </div>
+
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="5" 
+                        src="images/lion.jpg"
+                        alt="Lion Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="6" 
+                        src="images/bear.jpg"
+                        alt="Bear Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="7" 
+                        src="images/giraffe.jpg"
+                        alt="Giraffe Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="8" 
+                        src="images/elephant.jpg"
+                        alt="Elephant Image" class="card-image">
+                </div>
+
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="9" 
+                        src="images/bear.jpg"
+                        alt="Bear Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="10"
+                        src="images/gorilla.jpg"
+                        alt="Gorilla Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="11" 
+                        src="images/elephant.jpg"
+                        alt="Elephant Image" class="card-image">
+                </div>
+                <div class="card">
+                    <img 
+                        src="images/back.png"
+                        class="outline-image">
+                    <img id="12"
+                        src="images/gorilla.jpg"
+                        alt="Gorilla Image" class="card-image">
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="move-counter">Moves: 0</div>
+                <button id="restart" class="restart-button">
+                      Restart Game
+                  </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Memory.js"></script>
+</body>
+
+</html>
