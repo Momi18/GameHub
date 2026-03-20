@@ -451,3 +451,42 @@ body {
     }
     
 }
+
+/* This is the CSS for Wordle */
+.wordle-grid { 
+    display: grid;
+    grid-template-rows: repeat(6, 60px);
+    grid-template-columns: repeat(5, 60px);
+    gap: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.wordle-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    border: 2px solid rgb(58, 58, 60);
+    background-color: rgb(58, 58, 60);
+    transition: 0.3s;
+}
+
+.wordle-box.wrong {
+    background-color: rgb(181, 159, 59);
+}
+
+.wordle-box.right {
+    background-color: rgb(83, 141, 78);
+}
+
+/* animated */
+.animate-flip {
+    animation: flip 0.5s ease forwards;
+}
+
+@keyframes flip {
+    0% { transform: scaleY(1); }
+    50% { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+}
