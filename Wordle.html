@@ -23,6 +23,20 @@
 
         <h1 class="GameHead">Wordle</h1>
         <div class="container">
+            <div id="wordle-msg" class="msg-container hide">
+                <h2 id="status-text"></h2>
+                <p id="sub-text"></p>
+            </div>
+            
+            <div id="reset-confirm" class="msg-container hide">
+                <h2>Restart?</h2>
+                <p>Are you sure you want to start a new game?</p>
+                <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
+                    <button id="con-yes" class="restart-button" style="background: #538d4e;">Yes</button>
+                    <button id="con-no" class="restart-button" style="background: #b59f3b;">No</button>
+                </div>
+            </div>
+
             <div id="game"></div>
         </div>
         <button id="reset">Reset Game</button>
